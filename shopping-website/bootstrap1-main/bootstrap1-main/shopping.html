@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: lightgoldenrodyellow;
+    }
+    h1{
+        text-align: center;
+    }
+    label{
+        width: 40px;
+        padding: 300px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: blueviolet;
+    }
+    input{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>EMART SHOPPING</h1>
+    <ol>
+        <li><img src="images/onion.jpg" width="60px" height="60px">ONION (22)</li><br><br><hr>
+        <li><img src="images/carrot.jpg" width="60px" height="60px">CARROT (33)</li><br><br><hr>
+        <li><img src="images/cabbage.webp" width="60px" height="60px">CABBAGE (44)</li><br><br><hr>
+        <li><img src="images/potato.webp" width="60px" height="60px">POTATO (55)</li><br><br><hr>
+        <li><a href="../bootstrap1-main/welcome.html">GO TO HOME PAGE</a></li><hr>
+    </ol>
+    <label for="">Enter the choice:</label>
+    <input type="number" name="choice" id="ch"><br><br>
+    <label for="">Enter the Quantity:</label>
+    <input type="number" name="quantity" id="qt"><br><br>
+    <input type="button" name="submit" id="submit" value="submit" onclick="add()">
+    <h2 id="Price">TOTAL AMOUNT:</h2>
+</body>
+<script>
+    total=0
+    function add(){
+        var Price=0;
+        var cost=[0,22,33,44,55];
+
+        var ch= document.getElementById("ch").value;
+        var qt= document.getElementById("qt").value;
+        if(ch>=1 && ch<=5){
+            if(ch==5){
+                document.getElementById("Price").innerHTML="BILL = "+total;
+            }
+            else{
+                Price=cost[ch]* qt;
+                total=total+Price;
+                document.getElementById("Price").innerHTML=Price;
+            }
+        }
+        else{
+            document.getElementById("Price").innerHTML="Enter the crt choice 1-5"
+        }
+    }
+</script>
+</html>

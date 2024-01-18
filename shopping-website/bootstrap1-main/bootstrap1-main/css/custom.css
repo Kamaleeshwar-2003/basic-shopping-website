@@ -1,0 +1,18 @@
+.jumbotron
+{
+    background-color: crimson;
+    color: wheat;
+}
+
+
+.content1
+{
+    background-color: firebrick;
+    color: gold;
+}
+
+.carousel-control-next, .carousel-control-prev {
+
+    width:3%
+}
+    
